@@ -1,1 +1,8 @@
-<p>group-slider works!</p>
+<div class="groupContainer">
+    <button (click)="nextGroup()">Up</button>
+    <h1 class="groupHeader">Group Name: {{selectedGroup}} </h1>
+    <app-event-slider>
+
+    </app-event-slider>
+    <button (click)="prevGroup()">Down</button>
+</div>
