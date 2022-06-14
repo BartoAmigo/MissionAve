@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GroupFile } from './group-slider/models/group-file.model';
 
 @Component({
   selector: 'app-slider',
@@ -11,5 +12,49 @@ export class SliderComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  inputGroup: GroupFile[] = [
+    {
+
+    groupName: "Punks",
+    events: [{
+      eventName: "party",
+      imageUrl: "string",
+      buttonLink: "string"
+    },
+    {
+      eventName: "party",
+      imageUrl: "string",
+      buttonLink: "string"
+    },
+    {
+      eventName: "party",
+      imageUrl: "string",
+      buttonLink: "string"
+    }]
+
+    },
+    {
+
+      groupName: "Goth",
+
+      events: [{
+        eventName: "party",
+        imageUrl: "string",
+        buttonLink: "string"
+      },
+      {
+        eventName: "party",
+        imageUrl: "string",
+        buttonLink: "string"
+      },
+      {
+        eventName: "party",
+        imageUrl: "string",
+        buttonLink: "string"
+      }]
+
+    }
+  ]
 
 }

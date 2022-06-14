@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { GroupFile } from './models/group-file.model';
 
 @Component({
   selector: 'app-group-slider',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GroupSliderComponent implements OnInit {
 
+  groupPlaceSelector!: number;
+
+  @Input()
+  group!: GroupFile[];
+
   constructor() { }
 
   ngOnInit(): void {
+    this.groupPlaceSelector = 0;
   }
 
 }
