@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { EventFile } from './models/event-file.model';
 
 @Component({
@@ -6,9 +6,9 @@ import { EventFile } from './models/event-file.model';
   templateUrl: './event-slider.component.html',
   styleUrls: ['./event-slider.component.css']
 })
-export class EventSliderComponent implements OnInit {
+export class EventSliderComponent implements OnInit, OnChanges {
 
-  eventPlaceSelector!: number;
+  currEventIndex!: number;
 
   @Input()
   eventArray!: EventFile[];
@@ -19,24 +19,27 @@ export class EventSliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.eventPlaceSelector = 0;
+    this.currEventIndex = 0;
   }
 
-  setPlaceSelector(place: number): void {
-
-    this.eventPlaceSelector = place
+  ngOnChanges(changes: SimpleChanges): void {
+    this.resetCurrEventIndex();
   }
 
-  movePlaceSelector(direction: "Left" | "Right"): void {
+  resetCurrEventIndex() {
+    this.currEventIndex = 0;
+  }
+  
+  eventSelector(direction: "Left" | "Right"): void {
 
       const arrayLength = this.eventArray.length
 
       if(direction === "Left"){
         
-        this.eventPlaceSelector = (this.eventPlaceSelector - 1) !== -1 ? this.eventPlaceSelector - 1 : arrayLength - 1;
+        this.currEventIndex = (this.currEventIndex - 1) !== -1 ? this.currEventIndex - 1 : arrayLength - 1;
       }
       else {
-        this.eventPlaceSelector = (this.eventPlaceSelector + 1) !== arrayLength ? this.eventPlaceSelector + 1 : 0;
+        this.currEventIndex = (this.currEventIndex + 1) !== arrayLength ? this.currEventIndex + 1 : 0;
       }
 
   }

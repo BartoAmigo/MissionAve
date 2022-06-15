@@ -1,15 +1,11 @@
-<p>group-slider works!</p>
 
-<app-event-slider
-[eventArray]="groupsArray[groupPlaceSelector].events"
-[groupName]="groupsArray[groupPlaceSelector].groupName"
->
-</app-event-slider>
-<!-- <div class="groupContainer">
-    <button (click)="nextGroup()">Up</button>
-    <h1 class="groupHeader">Group Name: {{selectedGroup}} </h1>
-    <app-event-slider>
+<div class="groupContainer">
+    <button class="groupButtonUp" (click)="groupSelector('Up')">Up</button>
+    <h1 class="groupHeader">Group Name: {{groupsArray[this.currGroupIndex].groupName}} </h1>
+    <app-event-slider 
+    [eventArray]="groupsArray[currGroupIndex].events"
+    [groupName]="groupsArray[currGroupIndex].groupName">
 
     </app-event-slider>
-    <button (click)="prevGroup()">Down</button>
-</div> -->
+    <button class="groupButtonDown" (click)="groupSelector('Down')">Down</button>
+</div> 
