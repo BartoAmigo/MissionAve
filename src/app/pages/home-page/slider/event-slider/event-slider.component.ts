@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Router } from '@angular/router';
 import { EventFile } from './models/event-file.model';
 
 @Component({
@@ -10,16 +11,24 @@ export class EventSliderComponent implements OnInit, OnChanges {
 
   currEventIndex!: number;
 
+  currImage!: string;
+
+  eventTextIsHidden: boolean = true;
+
   @Input()
   eventArray!: EventFile[];
 
   @Input()
   groupName!: string;
 
-  constructor() { }
+  constructor(
+
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.currEventIndex = 0;
+    this.currImage = this.eventArray[this.currEventIndex].imageUrl;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -42,5 +51,22 @@ export class EventSliderComponent implements OnInit, OnChanges {
         this.currEventIndex = (this.currEventIndex + 1) !== arrayLength ? this.currEventIndex + 1 : 0;
       }
 
+  }
+
+  goToLink(url: string):void {
+
+    this.router.navigateByUrl('/' + url);
+  }
+
+  closeEventText():void {
+
+    console.log("close");
+    this.eventTextIsHidden = true;
+  }
+
+  showEventText():void {
+
+    console.log("open");
+    this.eventTextIsHidden = false;
   }
 }

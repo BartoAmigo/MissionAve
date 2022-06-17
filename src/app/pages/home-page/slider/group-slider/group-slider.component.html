@@ -1,7 +1,7 @@
 
 <div class="groupContainer">
+    <h1 class="groupHeader">{{groupsArray[this.currGroupIndex].groupName}} </h1>
     <button class="groupButtonUp" (click)="groupSelector('Up')">Up</button>
-    <h1 class="groupHeader">Group Name: {{groupsArray[this.currGroupIndex].groupName}} </h1>
     <app-event-slider 
     [eventArray]="groupsArray[currGroupIndex].events"
     [groupName]="groupsArray[currGroupIndex].groupName">

@@ -1,9 +1,11 @@
 .groupContainer {
     margin-top:10px;
-    background-color:green;
+    background-color:rgba(31, 31, 31, 0.381);
     width:80%;
+    max-height: 700px;
     margin-right:auto;
     margin-left:auto;
+    object-fit: contain;
 }
 
 .groupButtonUp {

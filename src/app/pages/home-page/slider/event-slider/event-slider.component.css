@@ -1,13 +1,45 @@
-.slider-image{
-    width: 100%;
-    height: 90%;
-    align-self: center;
-}
-.event-container{
-
+.slider-center{
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+.slider-center:hover{
+
+    background-color: rgba(0, 0, 0, 0.288);
+    cursor: pointer;
+}
+
+.hidden-until-hover{
+
+    display: none;
+}
+
+.text-is-shown{
+
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    line-height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.event-title{
+    text-align: center;
+}
+
+.event-description{
+    text-align: center;
+}
+
+.event-container{
+    width: 100%;
+    height: 500px;
     justify-content: space-around;
+    object-fit: contain;
     display: flex;
 }
 
@@ -15,12 +47,56 @@
 
     width: 100%;
     height: 100%;
+    background-color: rgba(250, 235, 215, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 0px 2px #000000;
+}
+
+.event-button-left:hover {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.429);
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .event-button-right {
 
     width: 100%;
     height: 100%;
+    background-color: rgba(250, 235, 215, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0px 2px #000000;
+}
+
+.arrow-border{
+
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.326);
+    border-style: dotted;
+    font-size: 45px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-width: 2px;
+}
+
+.event-button-right:hover {
+
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.429);
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .left-side{
@@ -35,7 +111,7 @@
 }
 
 .center{
-    width: 80%;
+    width: 100%;
     display: flexbox;
     justify-content: center;
     align-items: center;
@@ -44,4 +120,10 @@
 .view-event-button{
     width: 100%;
     height: 10%;
+}
+
+.event-link{
+
+    width:100%;
+    height: 100%;
 }

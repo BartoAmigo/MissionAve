@@ -1,20 +1,26 @@
-
-<p class="center">{{currEventIndex}}</p>
-<div class="event-container">
+<div 
+class="event-container" 
+[style.background-image]="'url(' + eventArray[currEventIndex].imageUrl + '), url(https://wallpaperaccess.com/full/4214425.png)'"
+[style.background-repeat]="'no-repeat'"
+[style.background-position]="'center'"
+[style.background-size]="'auto 100%, cover'"
+>
     
     <div class="left-side">
-        <button (click)="eventSelector('Left')" class="event-button-left">Left</button>
+        <button (click)="eventSelector('Left')" class="event-button-left"><div class="arrow-border">&#8592;</div></button>
     </div>
 
-    <div class="center">
-        
-        <img class= "slider-image" src = "{{eventArray[currEventIndex].imageUrl}}">
-        <button class="view-event-button">
-            <a href="{{eventArray[currEventIndex].buttonLink}}">See Event</a>
-        </button>
+    <div class= "slider-center" (click)="goToLink(eventArray[currEventIndex].buttonLink)" (mouseenter)="showEventText()"
+    (mouseleave)="closeEventText()">
+        <div [ngClass]="eventTextIsHidden ?  'hidden-until-hover' : 'text-is-shown'">
+            <h1 class="event-title">{{eventArray[currEventIndex].eventName}}</h1>
+            <p class="event-description">{{eventArray[currEventIndex].eventDesc}}</p>
+        </div>
     </div>
+    
+
     <div class="right-side">
-        <button (click)="eventSelector('Right')" class="event-button-right">Right</button>
+        <button (click)="eventSelector('Right')" class="event-button-right"><div class="arrow-border">&#8594;</div></button>
     </div>
     
 </div>
