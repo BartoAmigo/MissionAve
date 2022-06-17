@@ -1,14 +1,16 @@
 
+<p class="center">{{currEventIndex}}</p>
 <div class="event-container">
+    
     <div class="left-side">
         <button (click)="eventSelector('Left')" class="event-button-left">Left</button>
     </div>
 
     <div class="center">
-        <p class="center">{{currEventIndex}}</p>
+        
         <img class= "slider-image" src = "{{eventArray[currEventIndex].imageUrl}}">
-        <button class="center">
-            <a href="eventArray[currEventIndex].buttonLink">See Event</a>
+        <button class="view-event-button">
+            <a href="{{eventArray[currEventIndex].buttonLink}}">See Event</a>
         </button>
     </div>
     <div class="right-side">
