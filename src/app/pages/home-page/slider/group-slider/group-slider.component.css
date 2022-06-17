@@ -1,7 +1,8 @@
 .groupContainer {
     margin-top:10px;
     background-color:green;
-    width:750px;
+    width:80%;
+    height: 20%;
     margin-right:auto;
     margin-left:auto;
 }

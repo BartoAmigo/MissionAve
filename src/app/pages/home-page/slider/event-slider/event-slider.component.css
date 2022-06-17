@@ -1,0 +1,41 @@
+.slider-image{
+    width: 100%;
+    align-self: center;
+}
+.event-container{
+
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    display: flex;
+}
+
+.event-button-left {
+
+    width: 100%;
+    height: 100%;
+}
+
+.event-button-right {
+
+    width: 100%;
+    height: 100%;
+}
+
+.left-side{
+
+    width: 20%;
+    align-content: flex-start;
+}
+.right-side{
+
+    width: 20%;
+    align-content: flex-end;
+}
+
+.center{
+    display: flexbox;
+    width: 60%;
+    align-self: center;
+    justify-content: center;
+}

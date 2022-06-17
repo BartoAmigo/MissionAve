@@ -19,17 +19,17 @@ export class SliderComponent implements OnInit {
     groupName: "Punks",
     events: [{
       eventName: "party",
-      imageUrl: "string",
+      imageUrl: "assets/Punk Event.jpg",
       buttonLink: "string"
     },
     {
       eventName: "party",
-      imageUrl: "string",
+      imageUrl: "assets/Punk Event.jpg",
       buttonLink: "string"
     },
     {
       eventName: "party",
-      imageUrl: "string",
+      imageUrl: "assets/Punk Event.jpg",
       buttonLink: "string"
     }]
 
@@ -40,17 +40,17 @@ export class SliderComponent implements OnInit {
 
       events: [{
         eventName: "party",
-        imageUrl: "string",
+        imageUrl: "assets/Goth Event.jpg",
         buttonLink: "string"
       },
       {
         eventName: "party",
-        imageUrl: "string",
+        imageUrl: "assets/Goth Event.jpg",
         buttonLink: "string"
       },
       {
         eventName: "party",
-        imageUrl: "string",
+        imageUrl: "assets/Goth Event.jpg",
         buttonLink: "string"
       }]
 
