@@ -6,6 +6,9 @@
     margin-right:auto;
     margin-left:auto;
     object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .groupButtonUp {
@@ -20,4 +23,12 @@
     width:30%;
     margin-left:auto;
     margin-right:auto;
+}
+
+.group-selection {
+    width: 20%;
+    height: 100%;
+}
+.event-slider {
+    width: 100%;
 }
