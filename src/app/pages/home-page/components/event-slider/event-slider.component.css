@@ -1,0 +1,40 @@
+.eventSliderContainer {
+    margin-top:10px;
+    margin-left:auto;
+    margin-right:auto;
+    width:fit-content;
+}
+
+.mainContainer {
+    height:500px;
+    width:800px;
+    border:solid black 2px;
+    display:flex;
+    flex-direction:row;
+}
+
+.subContainer {
+    width:70%;
+    height:100%;
+    display:flex;
+}
+
+.groupListContainer {
+    width:30%;
+    height:100%;
+    background-color:blue;
+}
+
+.header {
+    text-align:center;
+}
+.eventContainer {
+    background-color:green;
+    width:stretch;
+}
+
+.button {
+    height:20%;
+    display:block;
+    align-self:center;
+}
