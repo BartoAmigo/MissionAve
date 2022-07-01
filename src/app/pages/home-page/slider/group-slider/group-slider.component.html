@@ -3,12 +3,45 @@
     
     <app-event-slider 
     [eventArray]="groupsArray[currGroupIndex].events"
-    [groupName]="groupsArray[currGroupIndex].groupName">
+    [groupName]="groupsArray[currGroupIndex].groupName"
+    class="event-slider">
 
     </app-event-slider>
     <div class="group-selection">
         <h1 class="groupHeader">{{groupsArray[this.currGroupIndex].groupName}} </h1>
         <button class="groupButtonUp" (click)="groupSelector('Up')">Up</button>
+        <ul>
+            <li class="category-item" (click)="setGroup('Punks')">
+                Punk
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+        </ul>
         <button class="groupButtonDown" (click)="groupSelector('Down')">Down</button>
     </div>
 </div> 

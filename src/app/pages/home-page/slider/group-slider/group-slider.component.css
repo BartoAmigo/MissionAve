@@ -1,3 +1,10 @@
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
 .groupContainer {
     margin-top:10px;
     background-color:rgba(31, 31, 31, 0.381);
@@ -28,7 +35,26 @@
 .group-selection {
     width: 20%;
     height: 100%;
+    
+    flex-basis: 20%;
 }
 .event-slider {
     width: 100%;
+    flex-basis: 100%;
+    display: flex;
+}
+
+.category-item {
+
+    background-color: rgba(255, 255, 255, 0.187);
+    padding: 10px;
+    border: 2px;
+    border-style: dotted;
+    width: 100%;
+    text-align: center;
+}
+
+.category-item :hover{
+    background-color: rgba(255, 255, 255, 0.429);
+    cursor: pointer;
 }

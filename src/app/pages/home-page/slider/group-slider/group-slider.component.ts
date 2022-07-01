@@ -32,4 +32,19 @@ export class GroupSliderComponent implements OnInit {
 
   }
 
+  setGroup(name: string): void{
+
+    let successful = false;
+
+    for( let item of this.groupsArray) {
+
+      if( item.groupName === name){
+        this.currGroupIndex = this.groupsArray.indexOf(item);
+        successful = true;
+      }
+    }
+
+    if (successful !== true) alert('No group with that name found');
+  }
+
 }
