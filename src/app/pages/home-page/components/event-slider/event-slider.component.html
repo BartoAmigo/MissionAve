@@ -1,13 +1,20 @@
 <div class="eventSliderContainer">
     <div class="mainContainer">
-      <h1>{{this.selectedGroup.groupName}}</h1>
         <div class="subContainer">
-            <button class="button">&lt;</button>
+            <button (click)="prevEvent()"class="button">&lt;</button>
             <div class="eventContainer">
+                <h2 *ngIf="currEvent" class = "eventTitle" style="text-align:center">{{currEvent.eventTitle}}</h2>
+                <div *ngIf="currEvent" class="eventAboutContainer">
+                    <img src={{currEvent.eventImg}}/>
+                    <h3>{{currEvent.eventDes}}</h3>
+                </div>
             </div>
-            <button class="button">></button>
+            <button (click)="nextEvent()" class="button">></button>
         </div>
         <div class="groupListContainer">
+            <ul>
+                <li *ngFor="let group of groups"><button [class.selected]="group === currGroup"(click)="selectGroup(group)">{{group.groupName}}</button></li>
+            </ul>
         </div>
     </div>
 </div>
