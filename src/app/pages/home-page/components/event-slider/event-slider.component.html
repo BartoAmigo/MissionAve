@@ -1,13 +1,67 @@
-<div class="eventSliderContainer">
-    <div class="mainContainer">
-      <h1>{{this.selectedGroup.groupName}}</h1>
-        <div class="subContainer">
-            <button class="button">&lt;</button>
-            <div class="eventContainer">
+
+<div class="group-container">
+
+    <div 
+    class="event-container" 
+    [style.background-image]="'url(' + groups[currGroupIndex].events[currEventIndex].imgUrl + '), url(https://wallpaperaccess.com/full/4214425.png)'"
+    [style.background-repeat]="'no-repeat'"
+    [style.background-position]="'center'"
+    [style.background-size]="'auto 100%, cover'"
+    >
+        
+        <div class="left-side">
+            <button (click)="eventSelector('Left')" class="event-button-left"><div class="arrow-border">&#8592;</div></button>
+        </div>
+
+        <div class= "slider-center" (click)="goToLink(groups[currGroupIndex].events[currEventIndex].link)" (mouseenter)="showEventText()"
+        (mouseleave)="closeEventText()">
+            <div [ngClass]="eventTextIsHidden ?  'hidden-until-hover' : 'text-is-shown'">
+                <h1 class="event-title">{{groups[currGroupIndex].events[currEventIndex].title}}</h1>
+                <p class="event-description">{{groups[currGroupIndex].events[currEventIndex].desc}}</p>
             </div>
-            <button class="button">></button>
         </div>
-        <div class="groupListContainer">
+        
+
+        <div class="right-side">
+            <button (click)="eventSelector('Right')" class="event-button-right"><div class="arrow-border">&#8594;</div></button>
         </div>
+        
     </div>
-</div>
+    <div class="group-selection">
+        <h1 class="group-header">{{groups[currGroupIndex].name}} </h1>
+        <button class="group-button-up" (click)="groupSelector('Up')">Up</button>
+        <ul>
+            <li class="category-item" (click)="setGroup('Punks')">
+                Punk
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+            <li class="category-item" (click)="setGroup('Goth')">
+                Goth
+            </li>
+        </ul>
+        <button class="group-button-down" (click)="groupSelector('Down')">Down</button>
+    </div>
+</div> 

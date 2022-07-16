@@ -1,40 +1,208 @@
-.eventSliderContainer {
+ul{
+    list-style-type: none;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+    overflow-y:scroll;
+    height: 80%;
+    max-height: 375px;
+}
+
+/* Left Container */
+
+.slider-center{
+    width: 100%;
+    flex-basis: 80%;
+    height: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+.slider-center:hover{
+
+    background-color: rgba(0, 0, 0, 0.288);
+    cursor: pointer;
+}
+
+.hidden-until-hover{
+
+    display: none;
+}
+
+.text-is-shown{
+
+    color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    line-height: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.event-title{
+    text-align: center;
+}
+
+.event-description{
+    text-align: center;
+}
+
+.event-container{
+    width:fit-content;
+    flex-basis: 100%;
+    height: 500px;
+    margin: 0px;
+    padding: auto;
+    justify-content: space-between;
+    object-fit: contain;
+    display: flex;
+}
+
+.event-button-left {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 235, 215, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 0px 2px #000000;
+}
+
+.event-button-left:hover {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.429);
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.event-button-right {
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(250, 235, 215, 0);
+    border-color: rgb(255, 255, 255);
+    border-width: 0px;
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 0px 2px #000000;
+}
+
+.arrow-border{
+
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, 0.326);
+    border-style: dotted;
+    font-size: 45px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    border-width: 2px;
+}
+
+.event-button-right:hover {
+
+    
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.429);
+    border-color: rgb(255, 255, 255);
+    border-width: 1px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.left-side{
+
+    flex-basis: 10%;
+    align-content: flex-start;
+}
+.right-side{
+
+    flex-basis: 10%;
+    align-content: flex-end;
+}
+
+.center{
+    flex-basis: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-event-button{
+    width: 100%;
+    height: 10%;
+}
+
+.event-link{
+
+    width:100%;
+    height: 100%;
+}
+
+/* Right Div */
+
+.group-container {
     margin-top:10px;
+    background-color:rgba(31, 31, 31, 0.381);
+    width:80%;
+    max-height: 700px;
+    margin-right:auto;
+    margin-left:auto;
+    object-fit: contain;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.group-header {
+
+    height: 10%;
+}
+
+.group-button-up {
+    display:block;
+    width:100%;
+    height: 5%;
     margin-left:auto;
     margin-right:auto;
-    width:fit-content;
 }
 
-.mainContainer {
-    height:500px;
-    width:800px;
-    border:solid black 2px;
-    display:flex;
-    flex-direction:row;
-}
-
-.subContainer {
-    width:70%;
-    height:100%;
-    display:flex;
-}
-
-.groupListContainer {
-    width:30%;
-    height:100%;
-    background-color:blue;
-}
-
-.header {
-    text-align:center;
-}
-.eventContainer {
-    background-color:green;
-    width:stretch;
-}
-
-.button {
-    height:20%;
+.group-button-down {
     display:block;
-    align-self:center;
+    width:100%;
+    height: 5%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.group-selection {
+    width: 20%;
+    height: 100%;
+    max-height: 375px;
+    flex-basis: 20%;
+}
+.event-slider {
+    width: 100%;
+    flex-basis: 100%;
+    display: flex;
+}
+
+.category-item {
+
+    background-color: rgba(255, 255, 255, 0.187);
+    padding: 10px;
+    border: 2px;
+    border-style: dotted;
+    width: 100%;
+    text-align: center;
+}
+
+.category-item:hover{
+    background-color: rgba(255, 255, 255, 0.429);
+    cursor: pointer;
 }

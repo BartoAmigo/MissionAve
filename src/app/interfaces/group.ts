@@ -1,7 +1,7 @@
-import {GroupEvent} from "./event";
+import {Event} from "./event";
 
 export interface Group {
-  groupId:number;
-  groupName:string;
-  groupEvents?:GroupEvent[];
+  // id:number;
+  name:string;
+  events:Event[];
 }

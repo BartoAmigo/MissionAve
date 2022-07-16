@@ -1,8 +1,9 @@
-export interface GroupEvent {
-  eventId:number;
-  eventTitle:string;
-  eventImg:string;
-  eventDes:string;
+export interface Event {
+  // id:number;
+  title:string;
+  imgUrl:string;
+  link:string;
+  desc?:string;
 }
 
 
