@@ -31,36 +31,7 @@
         <h1 class="group-header">{{groups[currGroupIndex].name}} </h1>
         <button class="group-button-up" (click)="groupSelector('Up')">Up</button>
         <ul>
-            <li class="category-item" (click)="setGroup('Punks')">
-                Punk
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
-            <li class="category-item" (click)="setGroup('Goth')">
-                Goth
-            </li>
+            <li *ngFor="let group of groups" class="category-item" (click)="setGroup(group.name)"> {{group.name}} </li>
         </ul>
         <button class="group-button-down" (click)="groupSelector('Down')">Down</button>
     </div>

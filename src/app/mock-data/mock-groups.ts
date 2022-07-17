@@ -37,8 +37,91 @@ export const MOCKGROUPS: Group[] = [
 
     },
     {
-
       name: "Goth",
+
+      events: [{
+        title: "like, a thing or something",
+        imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
+        link: "groups",
+        desc: "Idk who these people are, this is for testing"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      }]
+
+    },
+    {
+      name: "Mutt",
+
+      events: [{
+        title: "like, a thing or something",
+        imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
+        link: "groups",
+        desc: "Idk who these people are, this is for testing"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      }]
+
+    },
+    {
+      name: "Bloom Cab",
+
+      events: [{
+        title: "like, a thing or something",
+        imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
+        link: "groups",
+        desc: "Idk who these people are, this is for testing"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      }]
+
+    },
+    {
+      name: "Skate Club",
+
+      events: [{
+        title: "like, a thing or something",
+        imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
+        link: "groups",
+        desc: "Idk who these people are, this is for testing"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      },
+      {
+        title: "party",
+        imgUrl: "assets/GothEvent.jpg",
+        link: "groups"
+      }]
+
+    },
+    {
+      name: "Film Club",
 
       events: [{
         title: "like, a thing or something",
