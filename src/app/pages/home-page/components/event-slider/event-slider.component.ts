@@ -30,8 +30,14 @@ export class EventSliderComponent implements OnInit {
     }
   }
 
+
+  /* Function selectGroup(group:Group)  
+  *  Parameters: group:Group -> the group that was selected by the user 
+  *  Sets the group to the group that the user selected. 
+  */
+
   selectGroup(group:Group) {
-    this.currGroup = group
+    this.currGroup = group;
     if(this.checkEvents()) {
       this.setEvents();
     } else {
@@ -64,9 +70,17 @@ export class EventSliderComponent implements OnInit {
     }
   }
 
+  /* Function: checkEvents(): boolean  
+  *  Description: Checks to see if a group contains groupEvents. 
+  */
+
   checkEvents(): boolean {
     return this.currGroup.groupEvents ? true : false;
   }
+
+  /* Function: checkEvent(): boolean
+  *  Description: Checks to see if a groupEvent has events exisiting on the current index.  
+  */
   
   checkEvent(): boolean {
    return this.events[this.currEventIndex] ? true : false;

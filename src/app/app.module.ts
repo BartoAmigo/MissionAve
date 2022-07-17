@@ -11,7 +11,7 @@ import { GroupPageComponent } from './pages/group-page/group-page.component';
 import { EventSliderComponent } from './pages/home-page/components/event-slider/event-slider.component';
 import { HttpClientModule } from '@angular/common/http'
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './in-memory-data.service';
+import { InMemoryDataService } from './services/group/in-memory-data.service';
 
 @NgModule({
   declarations: [
