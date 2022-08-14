@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Group } from "../../../../interfaces/group";
-import {Event} from "../../../../interfaces/event";
+import {GroupEvent} from "../../../../interfaces/groupEvents";
 import { Router } from '@angular/router';
 import { GroupService } from 'src/app/services/group/group.service';
 
@@ -11,7 +11,7 @@ import { GroupService } from 'src/app/services/group/group.service';
 })
 export class EventSliderComponent implements OnInit {
   selectedGroup: Group;
-  selectedEvent?: Event;
+  selectedEvent?: GroupEvent;
   currGroupIndex: number;
 
   currEventIndex: number;
@@ -25,10 +25,10 @@ export class EventSliderComponent implements OnInit {
     this.currGroupIndex = 0;
     this.currEventIndex = 0;
     this.selectedGroup = this.groups[this.currGroupIndex];
-    if(!this.selectedGroup.events) {
+    if(!this.selectedGroup.groupEvents) {
       console.log("Selected group has no added events, event-slider.components.ts : 32");
     } else {
-      this.selectedEvent = this.selectedGroup.events[this.currEventIndex];
+      this.selectedEvent = this.selectedGroup.groupEvents[this.currEventIndex];
     }
   }
 

@@ -16,7 +16,7 @@ export const MOCKGROUPS: Group[] = [
     {
 
     name: "Punks",
-    events: [{
+    groupEvents: [{
       title: "Backyard Concert",
       imgUrl: "assets/PunkEvent.jpg",
       link: "groups",
@@ -39,7 +39,7 @@ export const MOCKGROUPS: Group[] = [
     {
       name: "Goth",
 
-      events: [{
+      groupEvents: [{
         title: "like, a thing or something",
         imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
         link: "groups",
@@ -60,7 +60,7 @@ export const MOCKGROUPS: Group[] = [
     {
       name: "Mutt",
 
-      events: [{
+      groupEvents: [{
         title: "like, a thing or something",
         imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
         link: "groups",
@@ -81,7 +81,7 @@ export const MOCKGROUPS: Group[] = [
     {
       name: "Bloom Cab",
 
-      events: [{
+      groupEvents: [{
         title: "like, a thing or something",
         imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
         link: "groups",
@@ -102,7 +102,7 @@ export const MOCKGROUPS: Group[] = [
     {
       name: "Skate Club",
 
-      events: [{
+      groupEvents: [{
         title: "like, a thing or something",
         imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
         link: "groups",
@@ -123,7 +123,7 @@ export const MOCKGROUPS: Group[] = [
     {
       name: "Film Club",
 
-      events: [{
+      groupEvents: [{
         title: "like, a thing or something",
         imgUrl: "https://photos.bandsintown.com/thumb/12502147.jpeg",
         link: "groups",

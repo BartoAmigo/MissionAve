@@ -3,7 +3,7 @@
 
     <div 
     class="event-container" 
-    [style.background-image]="'url(' + groups[currGroupIndex].events[currEventIndex].imgUrl + '), url(https://wallpaperaccess.com/full/4214425.png)'"
+    [style.background-image]="'url(' + groups[currGroupIndex].groupEvents[currEventIndex].imgUrl + '), url(https://wallpaperaccess.com/full/4214425.png)'"
     [style.background-repeat]="'no-repeat'"
     [style.background-position]="'center'"
     [style.background-size]="'auto 100%, cover'"
@@ -13,11 +13,11 @@
             <button (click)="eventSelector('Left')" class="event-button-left"><div class="arrow-border">&#8592;</div></button>
         </div>
 
-        <div class= "slider-center" (click)="goToLink(groups[currGroupIndex].events[currEventIndex].link)" (mouseenter)="showEventText()"
+        <div class= "slider-center" (click)="goToLink(groups[currGroupIndex].groupEvents[currEventIndex].link)" (mouseenter)="showEventText()"
         (mouseleave)="closeEventText()">
             <div [ngClass]="eventTextIsHidden ?  'hidden-until-hover' : 'text-is-shown'">
-                <h1 class="event-title">{{groups[currGroupIndex].events[currEventIndex].title}}</h1>
-                <p class="event-description">{{groups[currGroupIndex].events[currEventIndex].desc}}</p>
+                <h1 class="event-title">{{groups[currGroupIndex].groupEvents[currEventIndex].title}}</h1>
+                <p class="event-description">{{groups[currGroupIndex].groupEvents[currEventIndex].desc}}</p>
             </div>
         </div>
         

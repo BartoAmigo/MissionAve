@@ -1,7 +1,7 @@
-import {Event} from "./event";
+import {GroupEvent} from "./groupEvents";
 
 export interface Group {
   // id:number;
   name:string;
-  events:Event[];
+  groupEvents:GroupEvent[];
 }

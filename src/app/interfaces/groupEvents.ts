@@ -1,4 +1,4 @@
-export interface Event {
+export interface GroupEvent {
   // id:number;
   title:string;
   imgUrl:string;
