@@ -102,5 +102,7 @@
       }
     }
   },
-  "defaultProject": "mission-ave"
+  "cli": {
+    "analytics": false
+  }
 }
