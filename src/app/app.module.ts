@@ -9,6 +9,9 @@ import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import { GroupPageComponent } from './pages/group-page/group-page.component';
 import { EventSliderComponent } from './pages/home-page/components/event-slider/event-slider.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './services/group/in-memory-data.service';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,10 @@ import { EventSliderComponent } from './pages/home-page/components/event-slider/
     FormsModule,
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
