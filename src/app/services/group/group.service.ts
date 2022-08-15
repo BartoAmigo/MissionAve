@@ -1,16 +1,19 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Group } from 'src/app/interfaces/group';
-import { MOCKGROUPS } from 'src/app/mock-data/mock-groups';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GroupService {
 
-  constructor() { }
+  private homeUrl='api/groups';
 
-  getGroupList() : Group[] {
+  constructor(private http:HttpClient) { }
 
-    return MOCKGROUPS;
+  getGroups() : Observable<Group[]> {
+    console.log("GroupService.getGroups() fire ATTEMTPING GET REQUEST.");
+    return this.http.get<Group[]>(this.homeUrl); 
   }
 }

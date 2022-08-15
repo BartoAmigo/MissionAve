@@ -137,7 +137,7 @@ export class InMemoryDataService implements InMemoryDbService {
   
       }
     ]
-    return groups;
+    return {groups};
   }
   constructor() { }
 }

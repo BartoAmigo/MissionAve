@@ -10,29 +10,21 @@ import { GroupService } from 'src/app/services/group/group.service';
   styleUrls: ['./event-slider.component.css']
 })
 export class EventSliderComponent implements OnInit {
-  selectedGroup: Group;
+  selectedGroup?: Group;
   selectedEvent?: GroupEvent;
-  currGroupIndex: number;
-
-  currEventIndex: number;
-  groups!: Group[];
+  currGroupIndex: number = 0;
+  currEventIndex: number = 0;
+  groups: Group[] = [];
+  groupEvents: GroupEvent[] = [];
 
   eventTextIsHidden: boolean = true;
 
-  constructor( private router: Router, private service: GroupService ) {
-
-    this.groups = this.service.getGroupList();
-    this.currGroupIndex = 0;
-    this.currEventIndex = 0;
-    this.selectedGroup = this.groups[this.currGroupIndex];
-    if(!this.selectedGroup.groupEvents) {
-      console.log("Selected group has no added events, event-slider.components.ts : 32");
-    } else {
-      this.selectedEvent = this.selectedGroup.groupEvents[this.currEventIndex];
-    }
+  constructor( private router: Router, private groupService: GroupService ) {
   }
 
+  //api calls go here :)
   ngOnInit(): void {
+    this.getGroups();
   }
 
   eventSelector(direction: "Left" | "Right"): void {
@@ -92,6 +84,23 @@ export class EventSliderComponent implements OnInit {
     }
 
     if (successful !== true) alert('No group with that name found');
+  }
+
+  getGroups() {
+    this.groupService.getGroups().subscribe({
+      next: (res) => {console.log("event-slider.component.getGroups() fired"); 
+      this.groups = res;
+      this.groupEvents = this.groups[0].groupEvents;
+      this.currGroupIndex = 0;
+      this.currEventIndex = 0; 
+      this.selectedGroup = this.groups[this.currGroupIndex];
+      this.selectedEvent = this.groupEvents[this.currEventIndex];},
+      error:  (err) => {console.error(err)},
+      complete: () => {
+        console.log("setting group events"); 
+        console.log("Get groups is finished!");}
+
+  })
   }
 
 
